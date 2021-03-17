@@ -1,17 +1,22 @@
 let calculator = {
-sum: function() {
-	return (this.a + this.b);
-},
-mul: function() {
-	return (this.a * this.b);
-},
-read: function() {
-	this.a = +prompt('a', '');
-	this.b = +prompt('b', '');
-}
+
+	a: 0,
+	b: 0,
+
+	read: function(a, b) {
+		this.a = a;
+		this.b = b;
+	},
+
+	sum: function() {
+		return (this.a + this.b);
+	},
+
+	mul: function() {
+		return (this.a * this.b);
+	}
 
 };
-
 
 
 // НЕ УДАЛЯТЬ СТРОКУ, НУЖНА ДЛЯ ПРОВЕРКИ
