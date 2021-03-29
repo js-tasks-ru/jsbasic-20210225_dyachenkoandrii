@@ -1,34 +1,14 @@
 function getMinMax(str) {
-	let CommaSplit = str.split(',');
-	//console.log(CommaSplit);
 
-	let SpaceMap = CommaSplit.map((item) => item.split(' '));
- 	//console.log(SpaceMap);
+	let SpaceMap = str.split(',').map((item) => item.split(' '));
 
- 	let numbers =[];
+ 	let max = -Infinity;
+ 	let min = Infinity;
 
- 	SpaceMap.forEach((item) => { 
- 		item.forEach((itemElement) => {
+ 	let arr = SpaceMap.filter((item) => parseFloat(item, 10));
 
-	 		if(itemElement === '') {
-	 			return;
-	 		}
+ 	min = Math.min(...arr);
+ 	max = Math.max(...arr);
 
-	 		let num = parseFloat(itemElement, 10);
-
-	 		
-	 		if(isNaN(num)) {
-	 			return;
-	 		}
-	 		
-	 		numbers.push(num);
- 		})
- 	});	
-
- 	const min = Math.min(numbers);
- 	const max = Math.max(numbers);
-
- 	return {
- 		min, max
- 	}
+ 	return {min, max}
 }
