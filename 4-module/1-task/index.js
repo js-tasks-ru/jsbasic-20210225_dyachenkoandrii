@@ -4,7 +4,7 @@
 
     friends.forEach((item) => {
     const li = document.createElement('li');
-      li.appendChild(document.createElement(`${item.firstName}, ${item.lastName}`));
+      li.appendChild(document.createTextNode(`${item.firstName}, ${item.lastName}`));
       ul.appendChild(li);
     });
 
