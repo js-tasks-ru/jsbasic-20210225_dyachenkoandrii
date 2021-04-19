@@ -4,9 +4,7 @@ function makeFriendsList (friends) {
 	let li = document.createElement('li');
 
 	friends.forEach((item, arr) => {
-	
 		ul.insertAdjacentHTML('beforeEnd', '<li>'+item.firstName+item.lastName+'</li>');
-
 	});
 	  
   return ul;
