@@ -33,8 +33,8 @@ function highlight(table) {
 			row.classList.add('unavailable');
 		}   
 
-		else if(statusList.dataset.available === 'false') {
-			row.hidden = false;
+		else if(!statusList.dataset.available) {
+			row.hidden = true;
 		}
 
 	});
